@@ -11,7 +11,7 @@ export default {
 	},
 	globalData: {
 		api: {
-			home: 'https://055cfd20-bfe4-4b9a-be9d-f7c2cac59a57.bspapp.com/http/api/home',
+			home: 'https://dafc5c4b-72ef-43a5-92c2-d24b8412efe8.bspapp.com/http/api/home',
 		},
 	}
 

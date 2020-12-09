@@ -1,5 +1,6 @@
 <template>
 	<view class="container">
+		<aTip :isCustom="false" :delay="2500" text="添加到[我的小程序]"></aTip>
 		<v-tabs v-model="current" :tabs="tabs" @change="changeTab" class="tab"></v-tabs>
 		<view class="coupon" ref="coupon">
 			<view class="item" v-for="(v, i) in couponList" @click="toCoupon(i)" :key="i">
@@ -21,7 +22,11 @@
 </template>
 
 <script>
+import aTip from "../../components/a_tip/aTip.vue";
 export default {
+	components: {
+		aTip
+	},
 	data() {
 		return {
 			current: 0,
@@ -102,21 +107,57 @@ export default {
 			}, 500)
 		},
 		toCoupon(i){
-			console.log(this.couponList[i])
+			var that = this;
+			console.log(that.couponList[i])
+			
 			//h5
 			//#ifdef H5
-			window.location.href = this.couponList[i].url
+			window.location.href = that.couponList[i].url
 			//#endif
 			//微信小程序
 			//#ifdef MP-WEIXIN
-			if(this.couponList[i].minapp){
-				wx.navigateToMiniProgram({
-				  appId: this.couponList[i].minapp.appid,
-				  path: this.couponList[i].minapp.path,
-				  success(res) {
-					// 打开成功
-				  }
-				})
+			if(that.couponList[i].jumpType == 2){//一键复制
+				uni.setClipboardData({
+					data: that.couponList[i].copiedContent,
+					success: function (res) {
+						//uni.showToast({
+						//	title: that.couponList[i].tip,
+						//	icon:'none',
+						//	duration: 2000
+						//});
+						uni.showModal({
+							title: that.couponList[i].copiedTipTitle,
+							content: that.couponList[i].copiedTip,
+							showCancel:false,
+							success: function (res) {
+								if (res.confirm) {
+									console.log('用户点击确定');
+								} else if (res.cancel) {
+									console.log('用户点击取消');
+								}
+							}
+						});
+					},
+					fail:function (res) {
+						//uni.showToast({
+						//	title: '复制失败',
+						//	icon:'none',
+						//	duration: 2000
+						//});
+					}
+				});
+			}
+			else{//微信小程序跳转
+				
+				if(that.couponList[i].minapp){
+					wx.navigateToMiniProgram({
+					  appId: that.couponList[i].minapp.appid,
+					  path: that.couponList[i].minapp.path,
+					  success(res) {
+						// 打开成功
+					  }
+					})
+				}
 			}
 			//#endif
 		},
@@ -146,7 +187,7 @@ page {
 		position: fixed;
 		top: var(--window-top);
 		left: 0;
-		z-index: 9999;
+		z-index: 9998;
 	}
 	.coupon {
 		padding-top: 200rpx;
