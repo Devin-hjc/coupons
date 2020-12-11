@@ -1,100 +1,311 @@
-// 在本文件中可配置云数据库初始化，数据格式见：https://uniapp.dcloud.io/uniCloud/cf-database?id=db_init
-
-// 编写完毕后对本文件点右键，可按配置规则创建表和添加数据
-
 {
-	"coupon": { // 集合（表名）
-		"data": [ // 数据
-			{
-				"name": "饿了么红包",
-				"icon": "/static/coupon/ele.png",
-				"bannerPic": "/static/coupon/ele_banner.png",
-				"url": "https://s.click.ele.me/frZOjvu",
-				"type": 1,
-				"tabId": 1,
-				"jumpType":1,//类型，1跳转小程序，2一键复制
-				"copiedContent":"",//复制内容
-				"copiedTipTitle":"",//复制提示框标题
-				"copiedTip":"",//复制后提示语
-				"minapp": {
-					"appid": "wxece3a9a4c82f58c9",
-					"path": "pages/sharePid/web/index?scene=https://s.click.ele.me/wR9ecuu"
-				}
-			},
-			{
-				"name": "美团外卖红包",
-				"icon": "/static/coupon/meituan.png",
-				"bannerPic": "/static/coupon/meituan_banner.png",
-				"url": "https://runion.meituan.com/url?key=cd23768d09c339d1641b2738df39aa67&url=https%3A%2F%2Fi.meituan.com%2Fawp%2Fhfe%2Fblock%2Fa945391288b790d558b7%2F78716%2Findex.html%3Fappkey%3Dcd23768d09c339d1641b2738df39aa67%3Ajuhe&sid=juhe",
-				"type": 1,
-				"tabId": 2,
-				"jumpType":1,//类型，1跳转小程序或网页，2一键复制
-				"copiedContent":"",//复制内容
-				"copiedTipTitle":"",//复制提示框标题
-				"copiedTip":"",//复制后提示语
-				"minapp": {
-					"appid": "wxde8ac0a21135c07d",
-					"path": "/index/pages/h5/h5?weburl=https%3A%2F%2Frunion.meituan.com%2Furl%3Fkey%3D591ec05930c57331c1212b936e6785c1%26url%3Dhttps%253A%252F%252Fi.meituan.com%252Fawp%252Fhfe%252Fblock%252Fa13b87919a9ace9cfab4%252F89400%252Findex.html%253Fappkey%253D591ec05930c57331c1212b936e6785c1%253A000001%26sid%3D000001&lch=cps:waimai:5:591ec05930c57331c1212b936e6785c1:000001&f_token=1&f_userId=1"
-				}
-			},
-			{
-				"name": "三只松鼠大礼包",
-				"icon": "/static/coupon/jd.png",
-				"bannerPic": "/static/coupon/sanzhisongshu.png",
-				"url":"https://u.jd.com/tFDejq",
-				"type": 0,
-				"tabId": 3,
-				"jumpType":2,//类型，1跳转小程序，2一键复制
-				"copiedContent":"复制内容",//复制内容
-				"copiedTipTitle":"复制提示框标题",//复制提示框标题
-				"copiedTip":"复制后提示语",//复制后提示语
-				"minapp": {
-					"appid": "wx91d27dbf599dff74",
-					"path": "pages/proxy/union/union"
-				}
-			}
-		],
-		"schema": {
-			"bsonType": "object",
-			"permission": {
-				".read": true,
-				".create": false,
-				".update": false,
-				".delete": false
-			}
-		}
-	},
-	"tab": { // 集合（表名）
-		"data": [ // 数据
-			{
-				"icon": "/static/all.png",
-				"text": "全部",
-				"tabId": 0
-			},
-			{
-				"icon": "/static/ele.png",
-				"text": "饿了么",
-				"tabId": 1
-			},
-			{
-				"icon": "/static/meituan.png",
-				"text": "美团",
-				"tabId": 2
-			},
-			{
-				"icon": "/static/jd.png",
-				"text": "京东",
-				"tabId": 3
-			}
-		],
-		"schema": {
-			"bsonType": "object",
-			"permission": {
-				".read": true,
-				".create": false,
-				".update": false,
-				".delete": false
-			}
-		}
-	}
+    "coupon": {
+        "data": [
+            {
+                "bannerPic": "http://data.tudou8x.cn/1098-467.jpg",
+                "copiedContent": "",
+                "copiedTip": "",
+                "copiedTipTitle": "",
+                "icon": "/static/coupon/meituan.png",
+                "jumpType": 1,
+                "minapp": {
+                    "appid": "wxde8ac0a21135c07d",
+                    "path": "/index/pages/h5/h5?weburl=https%3A%2F%2Frunion.meituan.com%2Furl%3Fkey%3D591ec05930c57331c1212b936e6785c1%26url%3Dhttps%253A%252F%252Fi.meituan.com%252Fawp%252Fhfe%252Fblock%252Fa13b87919a9ace9cfab4%252F89400%252Findex.html%253Fappkey%253D591ec05930c57331c1212b936e6785c1%253A000001%26sid%3D000001&lch=cps:waimai:5:591ec05930c57331c1212b936e6785c1:000001&f_token=1&f_userId=1"
+                },
+                "name": "美团外卖红包",
+                "tabId": 1,
+                "type": 1,
+                "url": "https://runion.meituan.com/url?key=cd23768d09c339d1641b2738df39aa67&url=https%3A%2F%2Fi.meituan.com%2Fawp%2Fhfe%2Fblock%2Fa945391288b790d558b7%2F78716%2Findex.html%3Fappkey%3Dcd23768d09c339d1641b2738df39aa67%3Ajuhe&sid=juhe"
+            },
+            {
+                "bannerPic": "/static/coupon/ele_banner.png",
+                "copiedContent": "",
+                "copiedTip": "",
+                "copiedTipTitle": "",
+                "icon": "/static/coupon/ele.png",
+                "jumpType": 1,
+                "minapp": {
+                    "appid": "wxece3a9a4c82f58c9",
+                    "path": "pages/sharePid/web/index?scene=https://s.click.ele.me/wR9ecuu"
+                },
+                "name": "饿了么红包",
+                "tabId": 2,
+                "type": 1,
+                "url": "https://s.click.ele.me/frZOjvu"
+            },
+            {
+                "bannerPic": "http://data.tudou8x.cn/1098x467.jpg",
+                "copiedContent": "",
+                "copiedTip": "",
+                "copiedTipTitle": "",
+                "icon": "/static/coupon/meituan.png",
+                "jumpType": 1,
+                "minapp": {
+                    "appid": "wxde8ac0a21135c07d",
+                    "path": "/index/pages/h5/h5?weburl=https%3A%2F%2Frunion.meituan.com%2Furl%3Fkey%3D2c8fdd9ed6a8bb9db15b38cf065ba243%26url%3Dhttps%253A%252F%252Fi.meituan.com%252Fawp%252Fhfe%252Fblock%252Fc9ff59b58f6f5bf385b6%252F94455%252Findex.html%253Fappkey%253D2c8fdd9ed6a8bb9db15b38cf065ba243%253Axcx%26sid%3Dxcx&lch=cps:waimai:5:2c8fdd9ed6a8bb9db15b38cf065ba243:xcx&f_token=1&f_userId=1"
+                },
+                "name": "美团超市红包",
+                "tabId": 1,
+                "type": 1,
+                "url": "https://runion.meituan.com/url?key=2c8fdd9ed6a8bb9db15b38cf065ba243&url=https%3A%2F%2Fi.meituan.com%2Fawp%2Fhfe%2Fblock%2F652c4b9d8a2425a98ca5%2F92207%2Findex.html%3Fappkey%3D2c8fdd9ed6a8bb9db15b38cf065ba243%3Axcx&sid=xcx"
+            },
+            {
+                "bannerPic": "http://data.tudou8x.cn/%E7%BE%8E%E5%9B%A2%E8%AF%9D%E8%B4%B9.png",
+                "copiedContent": "",
+                "copiedTip": "",
+                "copiedTipTitle": "",
+                "icon": "/static/coupon/meituan.png",
+                "jumpType": 1,
+                "minapp": {
+                    "appid": "wxde8ac0a21135c07d",
+                    "path": "/dynamic-page/index?activityId=7&uid=143709635&yaoxin=1&mt_share_id=kiibg9oajrqc&scene=fenxiao-third-assist"
+                },
+                "name": "美团话费红包",
+                "tabId": 1,
+                "type": 2,
+                "url": "http://dpurl.cn/GMxFa2H"
+            },
+            {
+                "bannerPic": "http://dada.vwelfare.cn/%E5%94%AF%E5%93%81%E4%BC%9A1212.png",
+                "copiedContent": "",
+                "copiedTip": "",
+                "copiedTipTitle": "",
+                "icon": "http://dada.vwelfare.cn/%E5%94%AF%E5%93%81%E4%BC%9Alogo.jpg",
+                "jumpType": 1,
+                "minapp": {
+                    "appid": "wxe9714e742209d35f",
+                    "path": "/pages/special/special?tra_from=adp%3AC01V4mdqwt7zwasd%3A%3Amig_code%3A%3Aac01msyjv1djpi9q7vn4kyja8oabm3f7&chl_type=wxk&url=https%3A%2F%2Fmst.vip.com%2FW7_fJmdh6FlO1RxZWqtywQ.php%3Fwapid%3Dmst_100030102%26_src%3Dmst%26extra_banner%3D0%26nova%3D1%26nova_platform%3D1%26mst_page_type%3Dguide"
+                },
+                "name": "唯品会双12活动",
+                "tabId": 4,
+                "type": 3,
+                "url": "https://t.vip.com/wCV96ZqeKM7"
+            },
+            {
+                "bannerPic": "http://dada.vwelfare.cn/%E6%B7%98%E5%AE%9D12122.png",
+                "copiedContent": "4.0￥UzVVcLz6KOv￥",
+                "copiedTip": "复制成功，打开“淘宝”app领取",
+                "copiedTipTitle": "复制成功",
+                "icon": "http://dada.vwelfare.cn/12122.jpg",
+                "jumpType": 2,
+                "minapp": {
+                    "appid": "",
+                    "path": ""
+                },
+                "name": "桃|宝 双十二红包",
+                "tabId": 3,
+                "type": 3,
+                "url": ""
+            },
+            {
+                "bannerPic": "http://dada.vwelfare.cn/%E5%94%AF%E5%93%81%E4%BC%9A7%E5%85%83.png",
+                "copiedContent": "",
+                "copiedTip": "",
+                "copiedTipTitle": "",
+                "icon": "http://dada.vwelfare.cn/%E5%94%AF%E5%93%81%E4%BC%9Alogo.jpg",
+                "jumpType": 1,
+                "minapp": {
+                    "appid": "wxe9714e742209d35f",
+                    "path": "/pages/special/special?tra_from=adp%3AC01V4mdqwt9aqfs1%3A%3Amig_code%3A%3Aac01u0ex3qehifdcst2d792wy14m22mz&chl_type=wxk&url=https%3A%2F%2Fmst.vip.com%2FvH-Fnn0_6L_U0aXikuuugQ.php%3Fwapid%3Dmst_100030357%26_src%3Dmst%26extra_banner%3D115030357%26nova%3D1%26nova_platform%3D1%26mst_page_type%3Dguide"
+                },
+                "name": "唯品会独享7元优惠券",
+                "tabId": 4,
+                "type": 3,
+                "url": "https://t.vip.com/wCV96ZqeKM7"
+            },
+            {
+                "bannerPic": "http://dada.vwelfare.cn/%E5%94%AF%E5%93%81%E4%BC%9A%E5%86%85%E9%83%A8.png",
+                "copiedContent": "",
+                "copiedTip": "",
+                "copiedTipTitle": "",
+                "icon": "http://dada.vwelfare.cn/%E5%94%AF%E5%93%81%E4%BC%9Alogo.jpg",
+                "jumpType": 1,
+                "minapp": {
+                    "appid": "wxe9714e742209d35f",
+                    "path": "/pages/special/special?tra_from=adp%3AC01V4mdqwt0x5ycz%3A%3Amig_code%3A%3Aac01ewfqmeit16pfxrvoiqtafvn056vh&chl_type=wxk&url=https%3A%2F%2Fmst.vip.com%2Ftwqw_9GG3OFygHu9Ca2ROQ.php%3Fwapid%3Dmst_100029159%26_src%3Dmst%26extra_banner%3D0%26nova%3D1%26nova_platform%3D1%26mst_page_type%3Dguide"
+                },
+                "name": "唯品会绝密内部价清单",
+                "tabId": 4,
+                "type": 3,
+                "url": "https://t.vip.com/wCV96ZqeKM7"
+            },
+            {
+                "bannerPic": "http://dada.vwelfare.cn/%E8%8A%B1%E5%B0%8F%E7%8C%AA.png",
+                "copiedContent": "",
+                "copiedTip": "",
+                "copiedTipTitle": "",
+                "icon": "http://dada.vwelfare.cn/%E8%8A%B1%E5%B0%8F%E7%8C%AAlogo3.png",
+                "jumpType": 1,
+                "minapp": {
+                    "appid": "wxe9714e742209d35f",
+                    "path": "/kfpub/pages/gift?jump_home=1&f_dpsid=3cd6ef179f9e48278f27457087fb9591&latitude=22.51205783420139&g_channel=2f9e032794de100a0b8eb5a203bd2a37&entrance_channel=&channel=2001001001&xpsid=7e06ad5d4e4c4dd9bf97583bf0bbb1de&share_code=bv8t0oha7iemt1naraig&dchn=zxOgqk&channel_id=2001001001&longitude=113.94034640842014&city_id=2"
+                },
+                "name": "花小猪新人超级大礼包",
+                "tabId": 5,
+                "type": 3,
+                "url": "https://t.vip.com/wCV96ZqeKM7"
+            },
+            {
+                "bannerPic": "http://dada.vwelfare.cn/%E7%91%9E%E5%B9%B8%E5%92%96%E5%95%A1.png",
+                "copiedContent": "",
+                "copiedTip": "",
+                "copiedTipTitle": "",
+                "icon": "http://dada.vwelfare.cn/%E7%91%9E%E5%B9%B8%E5%92%96%E5%95%A1logo.jpg",
+                "jumpType": 1,
+                "minapp": {
+                    "appid": "wx21c7506e98a2fe75",
+                    "path": "/pages/share/inviter/inviter?locationType=1&activityNo=NR201810220001&shareType=3&channelInviteCode=undefined&target=usq27pFODtoM2PSL7_o0hg%3D%3D"
+                },
+                "name": "瑞幸咖啡新人红包",
+                "tabId": 5,
+                "type": 3,
+                "url": ""
+            },
+			
+			
+            {
+                "bannerPic": "http://dada.vwelfare.cn/%E6%BB%B4%E6%BB%B4%E5%A4%A7%E7%A4%BC%E5%8C%85.png",
+                "copiedContent": "",
+                "copiedTip": "",
+                "copiedTipTitle": "",
+                "icon": "http://dada.vwelfare.cn/%E6%BB%B4%E6%BB%B4logo.jpg",
+                "jumpType": 1,
+                "minapp": {
+                    "appid": "wxaf35009675aa0b2a",
+                    "path": "/passenger-recommend/views/coupon/index?template=1&sharecode=bv91imtuutbcail1q2ug&root_dchn=qWbDYz&channel_id=1100000090&scene=14"
+                },
+                "name": "滴滴新老用户大礼包",
+                "tabId": 6,
+                "type": 3,
+                "url": ""
+            },
+            {
+                "bannerPic": "http://dada.vwelfare.cn/%E6%BB%B4%E6%BB%B4%E7%99%BE%E4%BA%BF%E8%A1%A5%E8%B4%B4.png",
+                "copiedContent": "",
+                "copiedTip": "",
+                "copiedTipTitle": "",
+                "icon": "http://dada.vwelfare.cn/%E6%BB%B4%E6%BB%B4logo.jpg",
+                "jumpType": 1,
+                "minapp": {
+                    "appid": "wxaf35009675aa0b2a",
+                    "path": "/welfare-center/views/homepage/index?g_page_id=&page_from=&trace_id=645ad00f5fd218c36b3fa1b228982b02&share_type=invite_sign&new_source_id=283360681468539&share_date=2020-12-10&activity_id=1253672&share_uid=&source_id=VK8tMAZ7DPFUYeWTtc5jwQ%253D%253D&channel_id=1100000349&city_id=2"
+                },
+                "name": "滴滴百亿补贴",
+                "tabId": 6,
+                "type": 3,
+                "url": ""
+            },
+			
+            {
+                "bannerPic": "http://dada.vwelfare.cn/%E6%8B%BC%E5%A4%9A%E5%A4%9A%E8%B5%9A.png",
+                "copiedContent": "",
+                "copiedTip": "",
+                "copiedTipTitle": "",
+                "icon": "http://dada.vwelfare.cn/%E6%8B%BC%E5%A4%9A%E5%A4%9Alogo.jpg",
+                "jumpType": 1,
+                "minapp": {
+                    "appid": "wxe5ed701e654f37b3",
+                    "path": ""
+                },
+                "name": "拼多多内部券查询",
+                "tabId": 100,
+                "type": 3,
+                "url": ""
+            },
+            {
+                "bannerPic": "http://dada.vwelfare.cn/%E7%BA%A2%E5%8C%852.png",
+                "copiedContent": "",
+                "copiedTip": "",
+                "copiedTipTitle": "",
+                "icon": "http://dada.vwelfare.cn/%E7%BA%A2%E5%8C%85.jpg",
+                "jumpType": 1,
+                "minapp": {
+                    "appid": "wxb3025d19ebe73e37",
+                    "path": ""
+                },
+                "name": "每日打卡领现金红包",
+                "tabId": 100,
+                "type": 3,
+                "url": ""
+            },
+            {
+                "bannerPic": "http://dada.vwelfare.cn/%E4%BC%98%E6%83%A0%E7%8C%AApig.png",
+                "copiedContent": "优惠猪pig",
+                "copiedTip": "已复制成功公众号名称“优惠猪pig”,到微信搜索公众号吧",
+                "copiedTipTitle": "复制成功",
+                "icon": "http://dada.vwelfare.cn/%E7%BA%A2%E5%8C%85.jpg",
+                "jumpType": 2,
+                "minapp": {
+                    "appid": "",
+                    "path": ""
+                },
+                "name": "推送最新红包公众号",
+                "tabId": 100,
+                "type": 3,
+                "url": ""
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "permission": {
+                ".create": false,
+                ".delete": false,
+                ".read": true,
+                ".update": false
+            }
+        }
+    },
+    "tab": {
+        "data": [
+            {
+                "icon": "/static/all.png",
+                "tabId": 0,
+                "text": "全部"
+            },
+            {
+                "icon": "/static/meituan.png",
+                "tabId": 1,
+                "text": "美团"
+            },
+            {
+                "icon": "/static/ele.png",
+                "tabId": 2,
+                "text": "饿了么"
+            },
+            {
+                "icon": "http://dada.vwelfare.cn/12122.jpg",
+                "tabId": 3,
+                "text": "双十二"
+            },
+            {
+                "icon": "http://dada.vwelfare.cn/%E5%94%AF%E5%93%81%E4%BC%9Alogo.jpg",
+                "tabId": 4,
+                "text": "唯品会"
+            },
+            {
+                "icon": "http://dada.vwelfare.cn/%E8%8A%B1%E5%B0%8F%E7%8C%AAlogo3.png",
+                "tabId": 5,
+                "text": "新人礼包"
+            },
+            {
+                "icon": "http://dada.vwelfare.cn/%E6%BB%B4%E6%BB%B4logo.jpg",
+                "tabId": 6,
+                "text": "滴滴"
+            },
+            {
+                "icon": "http://dada.vwelfare.cn/%E7%BA%A2%E5%8C%85.jpg",
+                "tabId": 100,
+                "text": "更多福利"
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "permission": {
+                ".create": false,
+                ".delete": false,
+                ".read": true,
+                ".update": false
+            }
+        }
+    }
 }
